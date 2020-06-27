@@ -1,0 +1,14 @@
+.navbar
+  .index
+    %h1.index__title
+      =@users.nickname
+      %span.index__title__greet さん こんにちは！
+    -if user_signed_in?
+      .index__link
+        =link_to "分析","#",class:"index__link__analysis"
+        =link_to "資産","#",class:"index__link__assets"
+        =link_to "設定","#",class:"index__link__config"
+    - else
+      .index__link
+        =link_to "新規登録",new_user_registration_path,class:"index__sign-up"
+        =link_to "ログイン",new_user_session_path,class:"index__sign-in"

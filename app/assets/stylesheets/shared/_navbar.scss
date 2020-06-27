@@ -1,0 +1,26 @@
+.navbar{
+  width: 100%;
+  min-width: 300px;
+  line-height: 50px;
+  background-color: lightgray;
+  .index{
+    display: flex;
+    justify-content: left;
+    
+    &__title{
+
+      &__greet{
+        font-size: 12px;
+      }
+    }
+    &__link{
+      margin-left: 150px;
+      &__analysis{
+        margin-right: 20px;
+      }
+      &__assets{
+        margin-right: 20px;
+      }
+    }
+  }
+}
