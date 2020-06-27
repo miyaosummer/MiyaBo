@@ -13,12 +13,24 @@
         font-size: 12px;
       }
     }
+
     &__link{
       margin-left: 150px;
+      //ログイン時のnavbar
       &__analysis{
         margin-right: 20px;
       }
       &__assets{
+        margin-right: 20px;
+      }
+      &__config{
+        margin-right: 50px;
+      }
+      //非ログイン時のnavbar
+      &__sign-up{
+        margin-right: 20px;
+      }
+      &__sign-in{
         margin-right: 20px;
       }
     }

@@ -1,7 +1,9 @@
 class TopsController < ApplicationController
 
   def index
-    @users = User.find(current_user.id)
+    if user_signed_in?
+      @users = User.find(current_user.id)
+    end
   end
 
   def new
