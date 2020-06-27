@@ -1,13 +1,13 @@
 %p#notice= notice
 %p
   %strong タイトル
-  = @income.title
+  = @income.name
 %p
   %strong 時間
   = @income.start_time.strftime("%Y-%m-%d %H:%M")
 %p
-  %strong 内容
-  = @income.content
+  %strong 金額
+  = @income.money
 = link_to 'Edit', edit_income_path(@income)
 |
-= link_to 'Back', incomes_path
+= link_to 'Back', root_path

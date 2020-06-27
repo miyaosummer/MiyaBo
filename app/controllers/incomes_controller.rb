@@ -13,14 +13,14 @@ class IncomesController < ApplicationController
   end
 
   def create
-    income.create(income_parameter)
-    redirect_to incomes_path
+    Income.create(income_parameter)
+    redirect_to root_path
   end
 
   def destroy
     @income = Income.find(params[:id])
     @income.destroy
-    redirect_to incomes_path, notice:"削除しました"
+    redirect_to root_path, notice:"削除しました"
   end
 
   def edit
@@ -30,7 +30,7 @@ class IncomesController < ApplicationController
   def update
     @income = Income.find(params[:id])
     if @income.update(income_parameter)
-      redirect_to incomes_path, notice: "編集しました"
+      redirect_to root_path, notice: "編集しました"
     else
       render 'edit'
     end

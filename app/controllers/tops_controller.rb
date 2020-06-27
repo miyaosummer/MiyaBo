@@ -4,6 +4,7 @@ class TopsController < ApplicationController
     if user_signed_in?
       @users = User.find(current_user.id)
     end
+    @incomes = Income.all
   end
 
   def new
