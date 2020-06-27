@@ -1,0 +1,12 @@
+= form_with(model: @income, local: true) do |form|
+  .name
+    = form.label :name
+    = form.text_field :name
+  .content
+    = form.label :money
+    = form.text_field :money
+  .time
+    = form.label :start_time
+    = form.datetime_select :start_time
+  .submit
+    = form.submit
