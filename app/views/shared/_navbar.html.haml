@@ -2,7 +2,7 @@
   .index
     %h1.index__title
       =@users.nickname
-      %span.index__title__greet さん こんにちは！
+      %span.index__title__greet さんこんにちは！
     -if user_signed_in?
       .index__link
         =link_to "分析","#",class:"index__link__analysis"
