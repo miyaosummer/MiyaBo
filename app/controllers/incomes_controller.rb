@@ -2,10 +2,13 @@ class IncomesController < ApplicationController
 
   def index
     @incomes = Income.all
+
   end
 
   def new
     @income = Income.new
+    @junres = Junre.all
+
   end
 
   def show

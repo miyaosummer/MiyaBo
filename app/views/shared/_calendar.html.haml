@@ -16,8 +16,13 @@
   -#       %td= link_to 'Destroy',income_path(income.id), method: :delete, data: { confirm: 'Are you sure?' }
 %br/
 = link_to '記録', new_income_path
-= month_calendar events: @incomes do |date, incomes|
-  =link_to date.day
+
+//カレンダーのひにち全体にリンクを貼りたい。どこがひにち全体の箇所なのか不明
+=month_calendar events: @incomes do |date, incomes|
+  =link_to "#" do
+    = date.day
   - incomes.each do |income|
     %div
-      = link_to income.name
+      = link_to income.name,"#"
+      = income.money
+      %span 円
