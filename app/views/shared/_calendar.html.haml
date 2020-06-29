@@ -22,7 +22,9 @@
   =link_to "#" do
     = date.day
   - incomes.each do |income|
-    %div
-      = link_to income.name,"#"
-      = income.money
-      %span 円
+    %div.index
+      = link_to "#{income.name}:#{income.money}円"
+      = link_to top_path(income.id),method: :delete do
+        %i.far.fa-trash-alt
+
+

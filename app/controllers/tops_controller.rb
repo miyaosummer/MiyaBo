@@ -23,6 +23,9 @@ class TopsController < ApplicationController
   end
 
   def destroy
+    @income = Income.find(params[:id])
+    @income.destroy
+    redirect_to root_path
   end
   
 end
