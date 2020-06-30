@@ -34,6 +34,7 @@ class AssetsController < ApplicationController
   end
 
   private
+  
   def asset_params
     params.require(:asset).permit(:name,:money,:comment).merge(user_id: current_user.id)
   end

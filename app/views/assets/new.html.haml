@@ -1,4 +1,4 @@
-= form_with model: @asset ,local: true do |f|
+= form_with(model: @asset ,local: true) do |f|
   = f.label :name
   = f.select :name , @junres.map { |j| [j.name, j.name, {"ジャンル": @asset.name}] }
   ¥
