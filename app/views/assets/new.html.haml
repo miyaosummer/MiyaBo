@@ -1,0 +1,6 @@
+= form_with model: @asset ,local: true do |f|
+  = f.label :name
+  = f.select :name , @junres.map { |j| [j.name, j.name, {"ジャンル": @asset.name}] }
+  ¥
+  = f.text_field :money,placeholder:"---------------円",class:"name"
+  = f.submit

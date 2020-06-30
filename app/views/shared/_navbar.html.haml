@@ -6,7 +6,7 @@
       .index__link
         =link_to "分析","#",class:"index__link__analysis"
         =link_to "資産","#",class:"index__link__assets"
-        =link_to "設定","#",class:"index__link__config"
+        =link_to "設定",configs_path,class:"index__link__config"
         =link_to "ログアウト",destroy_user_session_path,method: :delete,class:"index__sign-out"
     -else
       %h1.index__title

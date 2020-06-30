@@ -19,7 +19,7 @@
 
 //カレンダーのひにち全体にリンクを貼りたい。どこがひにち全体の箇所なのか不明
 =month_calendar events: @incomes do |date, incomes|
-  =link_to "#" do
+  =link_to new_income_path do
     = date.day
   - incomes.each do |income|
     %div.index
