@@ -5,6 +5,9 @@ class AssetsController < ApplicationController
   end
 
   def new
+    if user_signed_in?
+      @user = User.find(current_user.id)
+    end
     @asset = Asset.new
     @junres = Junre.all
   end
@@ -12,8 +15,8 @@ class AssetsController < ApplicationController
   def create
     @asset = Asset.new(asset_params)
     if @asset.save
-      redirect_to new_asset_path
-      flash[:succes] = "#{@asset.name}の予算を#{@asset.money}に設定しました。"
+      redirect_to new_user_asset_path
+      flash[:succes] = "#{@asset.name}の予算を#{@asset.money}円に設定しました。"
     else
       render action: :new
       flash[:succes] = "設定に失敗しました。"

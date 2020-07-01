@@ -2,13 +2,12 @@ class IncomesController < ApplicationController
 
   def index
     @incomes = Income.all
-
   end
 
   def new
+    @user = User.find(current_user.id)
     @income = Income.new
     @junres = Junre.all
-
   end
 
   def show

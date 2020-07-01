@@ -1,4 +1,4 @@
-= form_with(model: @income, local: true) do |form|
+= form_with(model:[@user,@income], local: true) do |form|
   .name
     = form.label :name
     = form.select :name , @junres.map { |j| [j.name, j.name, {"ジャンル": @income.name}] }

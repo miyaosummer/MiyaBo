@@ -15,11 +15,11 @@
   -#       %td= link_to 'Edit', edit_income_path(income.id)
   -#       %td= link_to 'Destroy',income_path(income.id), method: :delete, data: { confirm: 'Are you sure?' }
 %br/
-= link_to '記録', new_income_path
+= link_to '記録', new_user_income_path(current_user.id)
 
 //カレンダーのひにち全体にリンクを貼りたい。どこがひにち全体の箇所なのか不明
 =month_calendar events: @incomes do |date, incomes|
-  =link_to new_income_path do
+  =link_to new_user_income_path(current_user.id) do
     = date.day
   - incomes.each do |income|
     %div.index
