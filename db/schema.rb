@@ -13,8 +13,8 @@
 ActiveRecord::Schema.define(version: 2020_06_30_024450) do
 
   create_table "assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.integer "money"
+    t.string "name", null: false
+    t.integer "money", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 2020_06_30_024450) do
   end
 
   create_table "incomes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.integer "money"
+    t.string "name", null: false
+    t.integer "money", null: false
     t.string "comment"
     t.bigint "user_id", null: false
     t.datetime "start_time"

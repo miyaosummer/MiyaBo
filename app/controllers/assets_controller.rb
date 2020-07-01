@@ -18,7 +18,7 @@ class AssetsController < ApplicationController
       redirect_to new_user_asset_path
       flash[:succes] = "#{@asset.name}の予算を#{@asset.money}円に設定しました。"
     else
-      render action: :new
+      redirect_to new_user_asset_path
       flash[:succes] = "設定に失敗しました。"
     end
   end
