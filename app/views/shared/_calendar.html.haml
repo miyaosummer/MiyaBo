@@ -23,7 +23,7 @@
     = date.day
   - incomes.each do |income|
     %div.index
-      = link_to "#{income.name}:#{income.money}円"
+      = link_to "#{income.name}:#{income.money}円", "/users/#{current_user.id}/incomes/#{income.id}/edit"
       = link_to top_path(income.id),method: :delete do
         %i.far.fa-trash-alt
 

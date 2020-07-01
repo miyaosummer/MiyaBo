@@ -1,0 +1,12 @@
+= form_with(model:[@user,@income], local: true) do |form|
+  .name
+    = form.label :name
+    = form.select :name , @junres.map { |j| [j.name, j.name, {"ジャンル": @income.name}] }
+  .content
+    = form.label :money
+    = form.text_field :money
+  .time
+    = form.label :start_time
+    = form.date_select :start_time
+  .submit
+    = form.submit

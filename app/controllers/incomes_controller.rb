@@ -26,7 +26,9 @@ class IncomesController < ApplicationController
   end
 
   def edit
+    @user = User.find(current_user.id)
     @income = Income.find(params[:id])
+    @junres = Junre.all
   end
 
   def update
