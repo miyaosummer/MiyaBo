@@ -1,0 +1,7 @@
+= flash[:succes]
+= form_with(model: [@user,@budget],local: true) do |f|
+  = f.label :name
+  = f.text_field :name 
+  ¥
+  = f.text_field :money,placeholder:"---------------円",class:"assets__name"
+  = f.submit
