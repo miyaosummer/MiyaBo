@@ -13,10 +13,10 @@ class AssetsController < ApplicationController
     @asset = Asset.new(asset_params)
     if @asset.save
       redirect_to new_asset_path
-      alert[:succes] = "#{@asset.name}の予算を#{@asset.money}に設定しました。"
+      flash[:succes] = "#{@asset.name}の予算を#{@asset.money}に設定しました。"
     else
       render action: :new
-      alert[:succes] = "設定に失敗しました。"
+      flash[:succes] = "設定に失敗しました。"
     end
   end
 
@@ -34,7 +34,7 @@ class AssetsController < ApplicationController
   end
 
   private
-  
+
   def asset_params
     params.require(:asset).permit(:name,:money,:comment).merge(user_id: current_user.id)
   end
