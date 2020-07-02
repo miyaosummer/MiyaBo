@@ -38,6 +38,6 @@ class BudgetsController < ApplicationController
   private
 
   def budgets_parameter
-    params.require(:budget).permit(:name, :money,).merge(user_id: current_user.id)
+    params.require(:budget).permit(:name, :money).merge(user_id: current_user.id)
   end
 end
