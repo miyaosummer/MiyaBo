@@ -10,6 +10,7 @@ class AssetsController < ApplicationController
     end
     @asset = Asset.new
     @junres = Junre.all
+    @assets = Asset.all
   end
 
   def create
