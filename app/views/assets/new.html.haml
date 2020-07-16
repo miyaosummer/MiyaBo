@@ -9,5 +9,13 @@
   ＜設定済みの予算＞
   -@assets.each do |asset|
     <br>
-    ="#{asset.name}:#{asset.money}円"
+    = form_with(model: [@user,@asset],method: :patch,local: true) do |f|
+      = f.label asset.name
+      = f.text_field :money, value: "#{asset.money}円"
+      = f.submit "変更する！"
+      -# ="#{asset.name}:#{asset.money}円"
+      -# %button{:onclick => "alert('button要素は、この使用例のようにスクリプトと組み合わせて利用されることが多いようです。')", :type => "button"}
+      -#   button要素に関するワンポイントメモを表示
+
+
   
