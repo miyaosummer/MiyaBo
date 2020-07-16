@@ -34,6 +34,7 @@ class AssetsController < ApplicationController
   end
 
   def edit
+    asset = Asset.find(params[:id])
   end
 
   def update
