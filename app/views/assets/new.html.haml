@@ -11,7 +11,9 @@
   -@assets.each do |asset|
     <br>
     ="#{asset.name}:#{asset.money}円"
-    =link_to "予算を変更する",edit_user_asset_path(current_user.id , asset)
+    %i#edit_asset_id.edit_asset_bottun.far.fa-heart
+
+
 
 
   
