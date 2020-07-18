@@ -7,7 +7,7 @@
   = f.text_field :money,placeholder:"---------------円",class:"assets__name"
   = f.submit
   <br>
-  ＜設定済みの予算＞
+  ＜設定した予算＞
   -@assets.each do |asset|
     <br>
     ="#{asset.name}:#{asset.money}円"
