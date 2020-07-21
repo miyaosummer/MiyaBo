@@ -1,0 +1,15 @@
+= flash[:succes]
+＜予算項目を追加する＞
+= form_with(model: [@user,@asset],local: true) do |f|
+  = f.label :name
+  = f.select :name , @junres.map { |j| [j.name, j.name, {"ジャンル": @asset.name}] }
+  ¥
+  = f.text_field :money,placeholder:"---------------円",class:"assets__name"
+  = f.submit
+  <br>
+  ＜設定した予算＞
+  -@assets.each do |asset|
+    <br>
+    ="#{asset.name}:#{asset.money}円"
+    %i#edit_asset_id.edit_asset_bottun.far.fa-heart
+    
